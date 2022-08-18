@@ -55,6 +55,22 @@ function generatePassword() {
   return password;
 }
 
+if (
+  upperCaseCharacters === false && lowerCaseCharacters === false && numbersCase === false && specialCharactersCase === false
+) {
+  alert("Your Password must be one of these character types")
+}
+
+var passwordOptions = {
+  length:length,
+  hasUpperCaseCharacters:hasUpperCaseCharacters,
+  hasLowerCaseCharacters:hasLowerCaseCharacters,
+  hasNumbersCase:hasNumbersCase,
+  hasSpecialCharactersCase:hasSpecialCharactersCase,
+};
+
+return passwordOptions
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
